@@ -29,7 +29,7 @@ public class FacultyProfileController {
 		if(facultyProfileBean != null){
 			facultyResponse.setFacultyProfileBean(facultyProfileBean);
 			facultyResponse.setResponseCode(EStudyHubConstant.OK);
-			facultyResponse.setResponseMessage("Account Freezed Sucessfully");
+			facultyResponse.setResponseMessage("Faculty Profile Saved Sucessfully");
 		} else {
 			facultyResponse.setResponseCode(EStudyHubConstant.NO_CONTENT);
 			facultyResponse.setResponseMessage("No Data Found");
