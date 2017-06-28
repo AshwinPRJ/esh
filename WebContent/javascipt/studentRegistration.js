@@ -52,7 +52,7 @@ function saveStudentRegistrationDetails() {
 		var stringifyVar = JSON.stringify(keyValue);
 	
 		$.ajax({
-					url : "../eStudyHub/api/save_student_registration_details",
+					url : "/eStudyHub/api/save_student_registration_details",
 					type : "POST",
 					data : stringifyVar,
 					dataType : "json",
