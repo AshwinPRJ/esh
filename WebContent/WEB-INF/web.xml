@@ -5,7 +5,7 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>eStudyHub</display-name>
 	<welcome-file-list>
-		<welcome-file>/faculty/facultyprofile.jsp</welcome-file>
+		<welcome-file>/WEB-INF/home.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>eStudyHub</servlet-name>
