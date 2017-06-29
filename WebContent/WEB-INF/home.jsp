@@ -20,12 +20,20 @@ function function2() {
 
 }
 
+function function3() {
+	
+	window.location = "/eStudyHub/attendance/studentattendance.jsp";
+
+}
+
 </script>
 <body>
 	<table width="40%" align="center">
 		<tr>
 			<td align="center"><input type="button" class="Button"	name="BtCustomerSave" id="BtCustomerSave"	value="Favulty Profile"	onclick="function1()"></td>
 			<td align="center"><input type="button" class="Button"	name="BtCustomerBack" id="BtCustomerBack"	value="Student Profile" onclick="function2()"></td>
+			<td align="center"><input type="button" class="Button"	name="BtCustomerBack" id="BtCustomerBack"	value="Student Attendance" onclick="function3()"></td>
+			
 		</tr>
 	</table>
 </body>
