@@ -1,5 +1,7 @@
 package com.excelit.estudyhub.studentregister.dao;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 
 import com.excelit.estudyhub.studentregister.bean.FamilyInformationBean;
@@ -42,7 +44,7 @@ public interface StudentRegistrationDao {
 	 * @return this DAO method definition used to retrieve student registration
 	 *         details
 	 */
-	public StudentProfileBean getStudentProfileInformation(SessionFactory sessionFactory, String studentRegisterId);
+	public List<StudentProfileBean> getStudentProfileInformation(SessionFactory sessionFactory);
 	
 	/**
 	 * @author POOJA
@@ -61,5 +63,6 @@ public interface StudentRegistrationDao {
 	 * this DAO method definition used to save student emergency contacts details
 	 */
 	public StudentEmergencyContactsBean saveStudentEmergencyContacts(SessionFactory sessionFactory,StudentEmergencyContactsBean studentEmergencyContacts);
+	
 
 }

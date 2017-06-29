@@ -6,6 +6,8 @@ package com.excelit.estudyhub.studentregister.bean;
  */
 import java.io.File;
 import java.io.Serializable;
+import java.math.BigDecimal;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,77 +17,102 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 import com.excelit.estudyhub.constants.DBconstants;
 @Entity
-@Table(name="esh_sfi",schema = DBconstants.SCHEMA_NAME)
+@Table(name="esh_sfamilyinfo",schema = DBconstants.SCHEMA_NAME)
 public class FamilyInformationBean  implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "sfi_slno")
+	@Column(name = "sfamilyinfo_slno")
 	private Integer serialNumber;
-	
 
-	 @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn(name = "spd_registrationid")
-      private StudentProfileBean studentRegistrationId;
 	
-	@Column(name = "sfi_relationship", length = 20)
+	@Column(name = "sfamilyinfo_relationship", length = 20)
 	private String relationship;
 	
-	@Column(name = "sfi_custodyofchild", length = 1)
+	@Column(name = "sfamilyinfo_custodyofchild", length = 1)
 	private String legalCustodyOfChild;
 	
-	@Column(name = "sfi_documents")
+	@Column(name = "sfamilyinfo_documents")
 	private File custodyOfChildDocuments;
 	
-	@Column(name = "sfi_firstname", length = 20)
+	@Column(name = "sfamilyinfo_firstname", length = 20)
 	private String firstName;
 	
-	@Column(name = "sfi_middlename", length = 20)
+	@Column(name = "sfamilyinfo_middlename", length = 20)
 	private String middleName;
 	
-	@Column(name = "sfi_lastname", length = 20)
+	@Column(name = "sfamilyinfo_lastname", length = 20)
 	private String lastName;
 	
-	@Column(name = "sfi_profession", length = 1)
+	@Column(name = "sfamilyinfo_profession", length = 40)
 	private String profession; 
 	
-	@Column(name = "sfi_homelanguage", length = 1)
+	@Column(name = "sparentsinfo_homelanguage", length = 1)
 	private String homeLanguage; 
 	
-	@Column(name = "sfi_addressline1", length = 50)
+	@Column(name = "sfamilyinfo_addressline1", length = 50)
 	private String addressLine1;
 
-	@Column(name = "sfi_addressline2", length = 50)
+	@Column(name = "sfamilyinfo_addressline2", length = 50)
 	private String addressLine2;
 
-	@Column(name = "sfi_addressline3", length = 50)
+	@Column(name = "sfamilyinfo_addressline3", length = 50)
 	private String addressLine3;
 
-	@Column(name = "sfi_city", length = 50)
+	@Column(name = "sfamilyinfo_city", length = 50)
 	private String cityOrTown;
 
-	@Column(name = "sfi_district", length = 60)
+	@Column(name = "sfamilyinfo_district", length = 60)
 	private String district;
 
-	@Column(name = "sfi_state", length = 50)
+	@Column(name = "sfamilyinfo_state", length = 50)
 	private String state;
 
-	@Column(name = "sfi_country", length = 50)
+	@Column(name = "sfamilyinfo_country", length = 50)
 	private String country;
 
-	@Column(name = "sfi_postal_code", length = 15)
+	@Column(name = "sfamilyinfo_postal_code", length = 15)
 	private Integer postalOrZipCode;
 	
-	@Column(name = "sfi_phonenumber", length = 15)
+	@Column(name = "sfamilyinfo_phonenumber", length = 15)
 	private Integer phoneNumber;
 	
-	@Column(name = "sfi_emailid", length = 15)
-	private String emailId;
+	@Column(name = "sfamilyinfo_sibling", length = 30)
+	private String Sibling;
+
+	@Column(name = "sfamilyinfo_siblingsname", length = 70)
+	private String siblingsName;
 	
+	@Column(name = "sfamilyinfo_siblingschool", length = 15)
+	private String school;
 	
+	@Column(name = "sfamilyinfo_siblingsgrade", length=5,precision=2)
+	private BigDecimal siblingsGrade;
+
+	
+	  
+	@OneToOne(cascade = CascadeType.ALL)
+	    @JoinColumn(name = "sfamilyinfo_registrationid",referencedColumnName="studnetprofile_registrationid")
+	   private StudentProfileBean studentProfileBean;
+	
+ 
+	    /**
+	 * @return the studentProfileBean
+	 */
+	public StudentProfileBean getStudentProfileBean() {
+		return studentProfileBean;
+	}
 
 	/**
+	 * @param studentProfileBean the studentProfileBean to set
+	 */
+	public void setStudentProfileBean(StudentProfileBean studentProfileBean) {
+		this.studentProfileBean = studentProfileBean;
+	}
+
+		/**
 	 * @return the serialNumber
 	 */
 	public Integer getSerialNumber() {
@@ -99,33 +126,6 @@ public class FamilyInformationBean  implements Serializable{
 		this.serialNumber = serialNumber;
 	}
 
-	/**
-	 * @return the homeLanguage
-	 */
-	public String getHomeLanguage() {
-		return homeLanguage;
-	}
-
-	/**
-	 * @param homeLanguage the homeLanguage to set
-	 */
-	public void setHomeLanguage(String homeLanguage) {
-		this.homeLanguage = homeLanguage;
-	}
-
-	/**
-	 * @return the studentRegistrationId
-	 */
-	public StudentProfileBean getStudentRegistrationId() {
-		return studentRegistrationId;
-	}
-
-	/**
-	 * @param studentRegistrationId the studentRegistrationId to set
-	 */
-	public void setStudentRegistrationId(StudentProfileBean studentRegistrationId) {
-		this.studentRegistrationId = studentRegistrationId;
-	}
 	/**
 	 * @return the relationship
 	 */
@@ -222,6 +222,20 @@ public class FamilyInformationBean  implements Serializable{
 	 */
 	public void setProfession(String profession) {
 		this.profession = profession;
+	}
+
+	/**
+	 * @return the homeLanguage
+	 */
+	public String getHomeLanguage() {
+		return homeLanguage;
+	}
+
+	/**
+	 * @param homeLanguage the homeLanguage to set
+	 */
+	public void setHomeLanguage(String homeLanguage) {
+		this.homeLanguage = homeLanguage;
 	}
 
 	/**
@@ -351,20 +365,61 @@ public class FamilyInformationBean  implements Serializable{
 	}
 
 	/**
-	 * @return the emailId
+	 * @return the sibling
 	 */
-	public String getEmailId() {
-		return emailId;
+	public String getSibling() {
+		return Sibling;
 	}
 
 	/**
-	 * @param emailId the emailId to set
+	 * @param sibling the sibling to set
 	 */
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setSibling(String sibling) {
+		Sibling = sibling;
+	}
+
+	/**
+	 * @return the siblingsName
+	 */
+	public String getSiblingsName() {
+		return siblingsName;
+	}
+
+	/**
+	 * @param siblingsName the siblingsName to set
+	 */
+	public void setSiblingsName(String siblingsName) {
+		this.siblingsName = siblingsName;
+	}
+
+	/**
+	 * @return the school
+	 */
+	public String getSchool() {
+		return school;
+	}
+
+	/**
+	 * @param school the school to set
+	 */
+	public void setSchool(String school) {
+		this.school = school;
+	}
+
+	/**
+	 * @return the siblingsGrade
+	 */
+	public BigDecimal getSiblingsGrade() {
+		return siblingsGrade;
+	}
+
+	/**
+	 * @param siblingsGrade the siblingsGrade to set
+	 */
+	public void setSiblingsGrade(BigDecimal siblingsGrade) {
+		this.siblingsGrade = siblingsGrade;
 	}
 	
-	
-	
+
 	
 }

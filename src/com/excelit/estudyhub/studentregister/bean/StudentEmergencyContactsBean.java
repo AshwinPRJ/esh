@@ -17,34 +17,33 @@ import javax.persistence.Table;
 import com.excelit.estudyhub.constants.DBconstants;
 
 @Entity
-@Table(name = "esh_seci", schema = DBconstants.SCHEMA_NAME)
+@Table(name = "esh_semergencycontancts", schema = DBconstants.SCHEMA_NAME)
 public class StudentEmergencyContactsBean implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "seci_slno", length = 11)
+	@Column(name = "semergencycontancts_slno")
 	private String serialNumber;
 	
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "spd_registrationid")
+	@JoinColumn(name = "semergencycontancts_registrationid",referencedColumnName="studnetprofile_registrationid")
 	private StudentProfileBean studentRegistrationId;
 
-	@Column(name = "seci_relationship", length = 50)
+	@Column(name = "semergencycontancts_relationship", length = 50)
 	private String relationship;
 
-	@Column(name = "seci_name", length = 50)
+	@Column(name = "semergencycontancts_name", length = 50)
 	private String Name;
 	
-	@Column(name = "seci_landlinenumber", length = 20)
+	@Column(name = "semergencycontancts_landlinenumber", length = 20)
 	private Integer landLine;
 
-	@Column(name = "seci_documents", length = 20)
+	@Column(name = "semergencycontancts_mobile", length = 20)
 	private Integer mobileNumber;
 
-	@Column(name = "seci_emailid", length = 20)
+	@Column(name = "semergencycontancts_email", length = 20)
 	private String emailId;
 
-	
 	/**
 	 * @return the serialNumber
 	 */
@@ -144,7 +143,5 @@ public class StudentEmergencyContactsBean implements Serializable {
 	}
 
 
-	
-	
 
 }

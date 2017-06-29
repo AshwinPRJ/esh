@@ -5,6 +5,7 @@ package com.excelit.estudyhub.studentregister.bean;
  * this bean class used for  Student Health Information
  */
 import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,32 +15,31 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 import com.excelit.estudyhub.constants.DBconstants;
 @Entity
-@Table(name="esh_shi",schema = DBconstants.SCHEMA_NAME)
+@Table(name="esh_shealthinfo",schema = DBconstants.SCHEMA_NAME)
 public class StudentHealthInformationBean implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "shi_slno", length = 11)
+	@Column(name = "shealthinfo_slno")
 	private Integer serialNumber;
 	
-	 @Id
+	
 	 @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn(name = "spd_registrationid")
+	    @JoinColumn(name = "shealthinfo_registrationid",referencedColumnName="studnetprofile_registrationid")
      private StudentProfileBean studentRegistrationId;
 	
-	@Column(name = "shi_allergies", length = 20)
+	@Column(name = "shealthinfo_allergies", length = 20)
 	private String Allergies;
 	
-	@Column(name = "shi_immunization", length = 20)
+	@Column(name = "shealthinfo_immunization", length = 20)
 	private String Immunization;
 	
-	@Column(name = "shi_specialneeds", length = 20)
+	@Column(name = "shealthinfo_specialneeds", length = 20)
 	private String specialNeeds;
 
-	
-	
 	/**
 	 * @return the serialNumber
 	 */
@@ -109,6 +109,7 @@ public class StudentHealthInformationBean implements Serializable{
 	public void setSpecialNeeds(String specialNeeds) {
 		this.specialNeeds = specialNeeds;
 	}
+
 	
-	
+
 }

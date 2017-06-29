@@ -31,7 +31,7 @@ public class StudentRegistrationAspect {
 	 * @param joinpoint
 	 * @return
 	 */
-	@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
+	/*@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
 	public Object saveStudentPreviousSchoolling(JoinPoint joinpoint) {
 		StudentRegistrationRequest studentRegistrationRequest = new StudentRegistrationRequest();
 		Object PreviousSchoolling[] = joinpoint.getArgs();
@@ -45,7 +45,7 @@ public class StudentRegistrationAspect {
 			}
 		}
 		return PreviousSchoolling;
-	}
+	}*/
 
 	/**
 	 * this method used to send request to saveStudentFamilyInformation()
@@ -54,7 +54,7 @@ public class StudentRegistrationAspect {
 	 * @param joinpoint
 	 * @return
 	 */
-	@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
+	/*@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
 	public Object saveStudentFamilyInformation(JoinPoint joinpoint) {
 
 		Object familyInformation[] = joinpoint.getArgs();
@@ -68,7 +68,7 @@ public class StudentRegistrationAspect {
 			}
 		}
 		return familyInformation;
-	}
+	}*/
 
 	/**
 	 * this method used to send request to saveStudentEmergencyContacts()
@@ -77,7 +77,7 @@ public class StudentRegistrationAspect {
 	 * @param joinpoint
 	 * @return
 	 */
-	@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
+	/*@After("execution(* com.excelit.estudyhub.studentregister.controller.StudentRegistrationController.saveStudentInformation(..))")
 	public Object saveStudentEmergencyContacts(JoinPoint joinpoint) {
 		StudentRegistrationRequest studentRegistrationRequest = new StudentRegistrationRequest();
 		Object emergencyContacts[] = joinpoint.getArgs();
@@ -92,5 +92,5 @@ public class StudentRegistrationAspect {
 		}
 		return emergencyContacts;
 	}
-
+*/
 }
