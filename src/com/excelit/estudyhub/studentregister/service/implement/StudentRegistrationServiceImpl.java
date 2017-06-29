@@ -1,7 +1,11 @@
 package com.excelit.estudyhub.studentregister.service.implement;
+
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.excelit.estudyhub.studentregister.bean.FamilyInformationBean;
 import com.excelit.estudyhub.studentregister.bean.PreviousSchoolingBean;
 import com.excelit.estudyhub.studentregister.bean.StudentEmergencyContactsBean;
@@ -42,8 +46,21 @@ public class StudentRegistrationServiceImpl implements StudentRegistrationServic
 	 */
 	@Override
 	public StudentProfileBean saveStudentProfileDetails(StudentRegistrationRequest studentRegistrationRequest) {
-		return studentRegistrationDao.saveStudentProfileInformation(sessionFactory,
-				studentRegistrationRequest.getStudentProfileRequest());
+		StudentProfileBean studentProfile = studentRegistrationRequest.getStudentProfileRequest();
+	String registerId="0";
+		for(StudentProfileBean studentProfileBean:studentRegistrationDao.getStudentProfileInformation(sessionFactory)){
+			registerId=studentProfileBean.getStudentRegistrationId();
+		}
+		
+		
+		
+		System.out.println("registerId"+registerId);
+
+		 Integer regid = Integer.parseInt(registerId) + 1;
+		System.out.println("registerId"+regid);
+		studentProfile.setStudentRegistrationId(regid.toString());
+		studentRegistrationDao.saveStudentProfileInformation(sessionFactory, studentProfile);
+		return studentProfile;
 	}
 
 	/**
@@ -57,7 +74,8 @@ public class StudentRegistrationServiceImpl implements StudentRegistrationServic
 			StudentRegistrationRequest studentRegistrationRequest) {
 		PreviousSchoolingBean previousSchooling = new PreviousSchoolingBean();
 		for (PreviousSchoolingBean previousSchoolingInfo : studentRegistrationRequest.getPreviousSchoolingRequest()) {
-			previousSchooling = studentRegistrationDao.savePreviousSchoolingInformation(sessionFactory,previousSchoolingInfo);
+			previousSchooling = studentRegistrationDao.savePreviousSchoolingInformation(sessionFactory,
+					previousSchoolingInfo);
 		}
 		return previousSchooling;
 
@@ -70,8 +88,8 @@ public class StudentRegistrationServiceImpl implements StudentRegistrationServic
 	 * @return this method used to retrieve student registration details
 	 */
 	@Override
-	public StudentProfileBean getStudentProfileInformation(String studentRegisterId) {
-		return studentRegistrationDao.getStudentProfileInformation(sessionFactory, studentRegisterId);
+	public List<StudentProfileBean> getStudentProfileInformation(String studentRegisterId) {
+		return studentRegistrationDao.getStudentProfileInformation(sessionFactory);
 	}
 
 	/**
@@ -84,7 +102,8 @@ public class StudentRegistrationServiceImpl implements StudentRegistrationServic
 	public FamilyInformationBean saveStudentFamilyInformation(StudentRegistrationRequest studentRegistrationRequest) {
 		FamilyInformationBean familyInformation = new FamilyInformationBean();
 		for (FamilyInformationBean familyInformationBean : studentRegistrationRequest.getFamilyInformation()) {
-			familyInformation = studentRegistrationDao.saveStudentFamilyInformation(sessionFactory,familyInformationBean);
+			familyInformation = studentRegistrationDao.saveStudentFamilyInformation(sessionFactory,
+					familyInformationBean);
 		}
 		return familyInformation;
 	}
@@ -101,7 +120,8 @@ public class StudentRegistrationServiceImpl implements StudentRegistrationServic
 		StudentEmergencyContactsBean studentEmergencyContactsBean = new StudentEmergencyContactsBean();
 		for (StudentEmergencyContactsBean studentEmergencyContacts : studentRegistrationRequest
 				.getStudentEmergencyContacts()) {
-			studentEmergencyContactsBean = studentRegistrationDao.saveStudentEmergencyContacts(sessionFactory,studentEmergencyContacts);
+			studentEmergencyContactsBean = studentRegistrationDao.saveStudentEmergencyContacts(sessionFactory,
+					studentEmergencyContacts);
 		}
 		return studentEmergencyContactsBean;
 

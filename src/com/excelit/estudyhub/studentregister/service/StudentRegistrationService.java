@@ -1,5 +1,7 @@
 package com.excelit.estudyhub.studentregister.service;
 
+import java.util.List;
+
 import com.excelit.estudyhub.studentregister.bean.FamilyInformationBean;
 import com.excelit.estudyhub.studentregister.bean.PreviousSchoolingBean;
 import com.excelit.estudyhub.studentregister.bean.StudentEmergencyContactsBean;
@@ -27,7 +29,7 @@ public PreviousSchoolingBean savePreviousSchoolingInformation(StudentRegistratio
  * @return 
  * this service method definition used to retrieve student registration  details
  */
-public StudentProfileBean getStudentProfileInformation(String studentRegisterId);
+public List<StudentProfileBean> getStudentProfileInformation(String studentRegisterId);
 
 /**
  * @author POOJA

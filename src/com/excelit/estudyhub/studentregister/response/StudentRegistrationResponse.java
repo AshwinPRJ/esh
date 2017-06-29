@@ -1,6 +1,8 @@
 package com.excelit.estudyhub.studentregister.response;
 
 
+import java.util.List;
+
 import com.excelit.estudyhub.studentregister.bean.PreviousSchoolingBean;
 import com.excelit.estudyhub.studentregister.bean.StudentProfileBean;
 import com.excelit.utils.EStudyHubResponse;
@@ -8,9 +10,26 @@ import com.excelit.utils.EStudyHubResponse;
 public class StudentRegistrationResponse extends EStudyHubResponse {
 	private StudentProfileBean studentProfileBean;
 	private PreviousSchoolingBean previousSchoolingBean;
+	private List<StudentProfileBean> getstudentProfile;
 	
 	
 	
+	
+	
+
+	/**
+	 * @return the getstudentProfile
+	 */
+	public List<StudentProfileBean> getGetstudentProfile() {
+		return getstudentProfile;
+	}
+
+	/**
+	 * @param getstudentProfile the getstudentProfile to set
+	 */
+	public void setGetstudentProfile(List<StudentProfileBean> getstudentProfile) {
+		this.getstudentProfile = getstudentProfile;
+	}
 
 	public PreviousSchoolingBean getPreviousSchoolingBean() {
 		return previousSchoolingBean;

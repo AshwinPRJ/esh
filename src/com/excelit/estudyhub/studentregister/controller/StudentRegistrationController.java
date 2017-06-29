@@ -1,5 +1,7 @@
 package com.excelit.estudyhub.studentregister.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,8 +40,10 @@ public class StudentRegistrationController {
 	public StudentRegistrationResponse saveStudentInformation(
 			@RequestBody StudentRegistrationRequest studentRegistrationRequest) {
 		StudentRegistrationResponse studentRegistrationResponse = new StudentRegistrationResponse();
-		StudentProfileBean studentProfileResponse = studentRegistrationService
-				.saveStudentProfileDetails(studentRegistrationRequest);
+		StudentProfileBean studentProfileResponse = studentRegistrationService.saveStudentProfileDetails(studentRegistrationRequest);
+		studentRegistrationService.savePreviousSchoolingInformation(studentRegistrationRequest);
+		studentRegistrationService.saveStudentFamilyInformation(studentRegistrationRequest);
+		studentRegistrationService.saveStudentEmergencyContacts(studentRegistrationRequest);
 		if (studentProfileResponse != null) {
 			studentRegistrationResponse.setStudentProfileBean(studentProfileResponse);
 			studentRegistrationResponse.setResponseCode(EStudyHubConstant.SUCCESS);
@@ -54,9 +58,9 @@ public class StudentRegistrationController {
 	 */
 	public StudentRegistrationResponse getStudentRegistrationDetails(@RequestParam("studentRegistrationId")String studentRegistrationId){
 		StudentRegistrationResponse studentRegistrationResponse = new StudentRegistrationResponse();
-		StudentProfileBean studentRegistration=studentRegistrationService.getStudentProfileInformation(studentRegistrationId);
-		if (studentRegistration != null) {
-			studentRegistrationResponse.setStudentProfileBean(studentRegistration);
+		List<StudentProfileBean> getstudentRegistration=studentRegistrationService.getStudentProfileInformation(studentRegistrationId);
+		if (getstudentRegistration != null) {
+			studentRegistrationResponse.setGetstudentProfile(getstudentRegistration);
 			studentRegistrationResponse.setResponseCode(EStudyHubConstant.SUCCESS);
 		}
 		return studentRegistrationResponse;

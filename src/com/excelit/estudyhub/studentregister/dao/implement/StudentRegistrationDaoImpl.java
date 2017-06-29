@@ -1,4 +1,6 @@
 package com.excelit.estudyhub.studentregister.dao.implement;
+import java.util.List;
+
 /**
  * @author  		:POOJA J
  *@since	:24/6/2017
@@ -6,7 +8,6 @@ package com.excelit.estudyhub.studentregister.dao.implement;
  */
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import com.excelit.estudyhub.studentregister.bean.FamilyInformationBean;
@@ -31,15 +32,16 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 	 *         registration details
 	 */
 	@Override
-	public StudentProfileBean getStudentProfileInformation(SessionFactory sessionFactory, String studentRegisterId) {
+	public List<StudentProfileBean> getStudentProfileInformation(SessionFactory sessionFactory) {
 		session = sessionFactory.openSession();
-		StudentProfileBean studentProfileInformation = (StudentProfileBean) session
-				.createCriteria(StudentProfileBean.class)
-				.add(Restrictions.eq("studentRegistrationId", studentRegisterId)).list();
+		@SuppressWarnings({ "unused", "unchecked" })
+		List<StudentProfileBean> studentProfileInformation = (List<StudentProfileBean>) session
+				.createCriteria(StudentProfileBean.class).list();
 		if (session != null && session.isOpen()) {
 			session.close();
 		}
 		return studentProfileInformation;
+		
 	}
 
 	/**
