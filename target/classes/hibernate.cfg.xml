@@ -22,7 +22,7 @@
 		<!-- Setup Package Bean Classes -->
 
 
-		 <!-- <property name="hbm2ddl.auto">create</property> -->
+		 <property name="hbm2ddl.auto">save</property>
 
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyProfileBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyQualificationBean" />
@@ -40,6 +40,10 @@
 			class="com.excelit.estudyhub.studentregister.bean.StudentEmergencyContactsBean" />
 		<mapping
 			class="com.excelit.estudyhub.studentregister.bean.StudentHealthInformationBean" />
+
+
+		<mapping class="com.excelit.estudyhub.holiday.bean.SchoolProfileBean" />
+		<mapping class="com.excelit.estudyhub.holiday.bean.ApplyLeaveBean" />
 	</session-factory>
 
 

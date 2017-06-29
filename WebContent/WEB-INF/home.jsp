@@ -7,33 +7,46 @@
 <title>Insert title here</title>
 </head>
 <script type="text/javascript">
+	function function1() {
 
-function function1() {
-	
-			window.location = "/eStudyHub/faculty/facultyprofile.jsp";
-		
-}
+		window.location = "/eStudyHub/faculty/facultyprofile.jsp";
 
-function function2() {
-	
-	window.location = "/eStudyHub/studentregistration/studentProfile.jsp";
+	}
 
-}
+	function function2() {
 
-function function3() {
-	
-	window.location = "/eStudyHub/attendance/studentattendance.jsp";
+		window.location = "/eStudyHub/studentregistration/studentProfile.jsp";
 
-}
+	}
 
+	function function3() {
+
+		window.location = "/eStudyHub/attendance/studentattendance.jsp";
+
+	}
+	function function4() {
+
+		window.location = "/eStudyHub/holiday/schoolholiday.jsp";
+
+	}
 </script>
 <body>
 	<table width="40%" align="center">
 		<tr>
-			<td align="center"><input type="button" class="Button"	name="BtCustomerSave" id="BtCustomerSave"	value="Favulty Profile"	onclick="function1()"></td>
-			<td align="center"><input type="button" class="Button"	name="BtCustomerBack" id="BtCustomerBack"	value="Student Profile" onclick="function2()"></td>
-			<td align="center"><input type="button" class="Button"	name="BtCustomerBack" id="BtCustomerBack"	value="Student Attendance" onclick="function3()"></td>
-			
+			<td align="center"><input type="button" class="Button"
+				name="BtCustomerSave" id="BtCustomerSave" value="Favulty Profile"
+				onclick="function1()"></td>
+			<td align="center"><input type="button" class="Button"
+				name="BtCustomerBack" id="BtCustomerBack" value="Student Profile"
+				onclick="function2()"></td>
+			<td align="center"><input type="button" class="Button"
+				name="BtCustomerBack" id="BtCustomerBack" value="Student Attendance"
+				onclick="function3()"></td>
+			<td align="center"><input type="button" class="Button"
+				name="BtCustomerBack" id="BtCustomerBack" value="School Leave"
+				onclick="function4()"></td>
+
+
 		</tr>
 	</table>
 </body>
