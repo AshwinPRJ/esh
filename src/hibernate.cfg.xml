@@ -7,7 +7,7 @@
 
 		<!-- Connection settings -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://192.168.1.200:5432/postgres</property>
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">postgres</property>
 		<property name="hibernate.connection.pool_size">999</property>
@@ -22,19 +22,24 @@
 		<!-- Setup Package Bean Classes -->
 
 
-<!-- 		<property name="hbm2ddl.auto">create</property> -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
 
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyProfileBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyQualificationBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyDesignationBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultySalaryBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultySkillSetsBean" />
-	
-<mapping class="com.excelit.estudyhub.studentregister.bean.StudentProfileBean" />
-<mapping class="com.excelit.estudyhub.studentregister.bean.PreviousSchoolingBean" />
-<mapping class="com.excelit.estudyhub.studentregister.bean.FamilyInformationBean" />
-<mapping class="com.excelit.estudyhub.studentregister.bean.StudentEmergencyContactsBean" />
-<mapping class="com.excelit.estudyhub.studentregister.bean.StudentHealthInformationBean" />
+
+		<mapping
+			class="com.excelit.estudyhub.studentregister.bean.StudentProfileBean" />
+		<mapping
+			class="com.excelit.estudyhub.studentregister.bean.PreviousSchoolingBean" />
+		<mapping
+			class="com.excelit.estudyhub.studentregister.bean.FamilyInformationBean" />
+		<mapping
+			class="com.excelit.estudyhub.studentregister.bean.StudentEmergencyContactsBean" />
+		<mapping
+			class="com.excelit.estudyhub.studentregister.bean.StudentHealthInformationBean" />
 	</session-factory>
 
 

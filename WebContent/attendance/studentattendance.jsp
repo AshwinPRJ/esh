@@ -14,7 +14,7 @@
 	src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript"
 	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/eStudyHub/javascipt/faculty.js"></script>
+<script type="text/javascript" src="/eStudyHub/javascipt/studentattendance.js"></script>
 </head>
 <body>
 	<h1 align="center">Student Attendance</h1>
@@ -30,6 +30,12 @@
 				</tr>
 			</thead>
 			<tbody id="tBody"></tbody>
+		</table>
+
+		<table width="40%" align="center">
+			<tr>
+				<td align="center"><input type="button" class="Button" name="BtCustomerSave" id="BtCustomerSave" value="Show Details" onclick="save()" /></td>
+			</tr>
 		</table>
 	</form>
 </body>

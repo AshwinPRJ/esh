@@ -61,6 +61,5 @@ public interface StudentRegistrationDao {
 	 * this DAO method definition used to save student emergency contacts details
 	 */
 	public StudentEmergencyContactsBean saveStudentEmergencyContacts(SessionFactory sessionFactory,StudentEmergencyContactsBean studentEmergencyContacts);
-	
 
 }
