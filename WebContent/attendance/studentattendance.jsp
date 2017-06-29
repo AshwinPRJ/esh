@@ -35,12 +35,6 @@
 			</thead>
 			<tbody id="tBody"></tbody>
 		</table>
-
-		<table width="40%" align="center">
-			<tr>
-				<td align="center"><input type="button" class="Button" name="BtCustomerSave" id="BtCustomerSave" value="Show Details" onclick="save()" /></td>
-			</tr>
-		</table>
 	</form>
 </body>
 </html>
