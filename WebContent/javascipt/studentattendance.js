@@ -1,23 +1,28 @@
+$(document).ready(
+		function() {
+			$(window).load(
+					function() {
+						alert("Image loaded.");
+						$.ajax({
+							url : "/eStudyHub/api/student/studentAttendance",
+							type : "POST",
+							contentType : "application/json; charset=utf-8",
+							dataType : "json",
+							success : function(data) {
+								var tableData = "";
+								$.each(data, function(key, value) {
+									console.log(value.studentRegistrationId);
+									tableData += '<tr><td align= "middle">'+ value.studentRegistrationId + '</td><td align= "middle">' + value.studentFirstName + '</td><td align= "middle">' + value.studentLastName + '</td><td align= "middle"><input type="radio" name="freezetransaction" id="Creditfreeze" value="A" onClick="DisableEnable()"></td><td align= "middle"><input type="button" name="delbut" id="delbut" value="Save" onclick="deleteRow(this)"/></td>';
+								});
 
-	$(document).ready(function(){
-	    $(window ).load(function(){
-	        alert("Image loaded.");
-	    	$.ajax({
-	    		url : "/eStudyHub/api/student/studentAttendance", 
-	    		type : "POST",
-	    		contentType : "application/json; charset=utf-8",
-	    		dataType : "json",
-	    		success : function(data) {
-	    			console.log(data);
-	    			tableData = "";
-	    			tableData += '<tr><td align= "middle">Primary</td><td align= "middle">'+ data.account.customerId + '</td><td align= "middle">'+ data.account.customer.customerShortName + '</td><td></td><td></td></tr>';
-	    		},
-	    		error : function(xhr, status, err) {
-	    			alert("Not a Valid Account   " + status);
-	    			$('#Table tbody').empty();
-	    		}
-	    	});
-	    });
-	});
-	
+								$('#Table tbody').empty();
+								$('#Table tbody').append(tableData);
 
+							},
+							error : function(xhr, status, err) {
+								alert("Not a Valid Account   " + status);
+								$('#Table tbody').empty();
+							}
+						});
+					});
+		});
