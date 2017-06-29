@@ -16,7 +16,7 @@ function function1() {
 
 function function2() {
 	
-	window.location = "/eStudyHub/student/studentProfile.jsp";
+	window.location = "/eStudyHub/studentregistration/studentProfile.jsp";
 
 }
 
