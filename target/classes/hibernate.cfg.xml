@@ -22,7 +22,7 @@
 		<!-- Setup Package Bean Classes -->
 
 
-		<!-- <property name="hbm2ddl.auto">create</property> -->
+		 <!-- <property name="hbm2ddl.auto">create</property> -->
 
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyProfileBean" />
 		<mapping class="com.excelit.estudyhub.faculty.bean.FacultyQualificationBean" />
