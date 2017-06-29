@@ -7,7 +7,7 @@
 
 		<!-- Connection settings -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://192.168.1.200:5432/postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://192.168.1.200:5432/eStudyHub</property>
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">postgres</property>
 		<property name="hibernate.connection.pool_size">999</property>

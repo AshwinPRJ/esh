@@ -24,7 +24,8 @@
 			<thead>
 				<tr>
 					<th class="TableHeaderRow">Register Number</th>
-					<th class="TableHeaderRow">Student Name</th>
+					<th class="TableHeaderRow">First Name</th>
+					<th class="TableHeaderRow">Last Name</th>
 					<th class="TableHeaderRow">Status</th>
 					<th class="TableHeaderRow">Save</th>
 				</tr>

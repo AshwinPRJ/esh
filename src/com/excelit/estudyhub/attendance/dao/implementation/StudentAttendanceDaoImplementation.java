@@ -1,5 +1,7 @@
 package com.excelit.estudyhub.attendance.dao.implementation;
 
+
+import java.util.Collections;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -13,16 +15,21 @@ import com.excelit.estudyhub.studentregister.bean.StudentProfileBean;
 public class StudentAttendanceDaoImplementation implements StudentAttendanceDaoInterface {
 	private Session session;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<StudentProfileBean> getStudentAccountDetailsDaoImplementation(SessionFactory sessionFactory) {
-
+		List<StudentProfileBean> studentProfileBean =Collections.EMPTY_LIST;
 		session = sessionFactory.openSession();
-		@SuppressWarnings("unchecked")
-		List<StudentProfileBean> studentProfileBean = (List<StudentProfileBean>) session
-				.createCriteria(StudentProfileBean.class).list();
+		studentProfileBean =session.createCriteria(StudentProfileBean.class).list();
+		System.err.println(">>>>>>>>>>>>>"+studentProfileBean.size());
+		for(StudentProfileBean studentProfileBean2 : studentProfileBean ){
+			System.err.println(">>>>>>>>>>>>>"+studentProfileBean2.getStudentRegistrationId());
+		}
 		if (session != null && session.isOpen()) {
 			session.close();
 		}
+		
+	
 		return studentProfileBean;
 	}
 }
