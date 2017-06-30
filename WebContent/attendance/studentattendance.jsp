@@ -17,7 +17,10 @@
 <script type="text/javascript" src="/eStudyHub/javascipt/studentattendance.js"></script>
 </head>
 <body>
-	<h1 align="center">Student Attendance</h1>
+
+<div class="segment_header" style="width: auto; text-align: Left;">
+					<h1 align="center" style="font-size: 30px; padding: 20px 1em;">Student Attendance</h1>
+				</div>
 	<form name="Acc" class="form-container">
 		<table style="widows: 90px;" align="center" border="1" cellpadding="2"
 			name="dataTable" id="Table" cellspacing="2">
@@ -31,12 +34,6 @@
 				</tr>
 			</thead>
 			<tbody id="tBody"></tbody>
-		</table>
-
-		<table width="40%" align="center">
-			<tr>
-				<td align="center"><input type="button" class="Button" name="BtCustomerSave" id="BtCustomerSave" value="Show Details" onclick="save()" /></td>
-			</tr>
 		</table>
 	</form>
 </body>
