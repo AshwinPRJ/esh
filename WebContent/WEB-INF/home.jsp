@@ -29,6 +29,11 @@
 		window.location = "/eStudyHub/holiday/schoolholiday.jsp";
 
 	}
+	function function5() {
+
+		window.location = "/eStudyHub/history/leavehistory.jsp";
+
+	}
 </script>
 <body>
 	<table width="40%" align="center">
@@ -43,8 +48,12 @@
 				name="BtCustomerBack" id="BtCustomerBack" value="Student Attendance"
 				onclick="function3()"></td>
 			<td align="center"><input type="button" class="Button"
-				name="BtCustomerBack" id="BtCustomerBack" value="School Leave"
+				name="BtCustomerBack" id="BtCustomerBack" value="Leave"
 				onclick="function4()"></td>
+				
+				<td align="center"><input type="button" class="Button"
+				name="BtCustomerBack" id="BtCustomerBack" value="Leave History"
+				onclick="function5()"></td>
 				
 
 
