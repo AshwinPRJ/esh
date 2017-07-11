@@ -19,7 +19,6 @@
 	<form id="FSForm">
 		
 			<div class="form_table">
-		
 				<div class="clear"></div>
 				<div id="q65" class="q full_width">
 					<a class="item_anchor" name="ItemAnchor45"></a>
@@ -27,9 +26,7 @@
 						<h1 style="font-size: 18px; padding: 20px 1em;">Faculty	Profiling</h1>
 					</div>
 				</div>
-	
 				<div class="clear"></div>
-	
 				<div id="q2" class="q ired" >
 					<a class="item_anchor" name="ItemAnchor1"></a> 
 					<label class="question left_question_first" for="RESULT_TextField-1">First Name&nbsp;<b class="icon_ired" style="color: #FF0000">*</b>
@@ -54,8 +51,6 @@
 						<input type="text" name="RESULT_TextField-3" class="text_field"	id="lastname" size="25" maxlength="25" value="" />
 					</div>
 				</div>
-				
-				
 				<div class="clear">
 				<div id="q37" class="q ired">
 					<a class="item_anchor" name="ItemAnchor4"></a> 
@@ -67,8 +62,6 @@
 						</tr>
 					</table>
 				</div></div>
-				
-				
 				<div class="clear"></div>
 				<div id="q4" class="q ired">
 					<a class="item_anchor" name="ItemAnchor5"></a> 
@@ -140,17 +133,14 @@
 						<input type="text" name="RESULT_TextField-12" class="text_field" id="cellphone" size="25" maxlength="255" value="" />
 					</div>
 				</div>
-				
-	<!-- 			
 				<div class="clear"></div>
 				<div id="q39" class="q ired">
 					<a class="item_anchor" name="ItemAnchor14"></a> 
 					<label	class="question left_question_first" for="RESULT_TextField-14">Date	of Birth&nbsp;<b class="icon_ired" style="color: #FF0000">*</b>
 					</label> 
 					<input type="text" name="RESULT_TextField-14" class="text_field calendar_field" id="dob" size="10" maxlength="10" datemax="" datemin="" value="" date="dd-mm-yy" /><img class="svg popup_button inline_button"	src="/images/icons/formIcons/calendar.svg" alt="calendar"	style="vertical-align: middle;" />
-				</div>  -->
-	
-		<!-- 		<div class="clear"></div>
+				</div>  
+		 		<div class="clear"></div>
 				<div id="q40" class="q">
 					<a class="item_anchor" name="ItemAnchor15"></a> 
 					<label	class="question left_question_first" for="RESULT_FileUpload-15">Upload	Photo 1</label>
@@ -160,7 +150,6 @@
 						<input	type="submit" name="Delete-15" value="Delete" class="file_upload_button" />
 					</div>
 				</div>
-				
 				<div class="clear"></div>
 				<div id="q41" class="q">
 					<a class="item_anchor" name="ItemAnchor16"></a> 
@@ -170,7 +159,7 @@
 						<input type="submit" name="Upload-16" value="Upload" class="file_upload_button" /> 
 						<input type="submit" name="Delete-16" value="Delete" class="file_upload_button" />
 					</div>
-				</div> -->
+				</div>
 				<div class="clear"></div>
 				<div id="q42" class="q">
 					<a class="item_anchor" name="ItemAnchor17"></a> 
@@ -209,7 +198,7 @@
 					</div>
 				</div>
 			
-	<!-- ################################################################################################################################################################################################################################################# -->
+<!-- ################################################################################################################################################################################################################################################# -->
 			
 				<div class="clear"></div>
 				<div id="q12" class="q full_width">
@@ -253,7 +242,7 @@
 						<input type="text" name="RESULT_TextField-25" class="text_field" id="Grade" size="25" maxlength="255" value="" />
 					</div>
 				</div>
-				<!-- <div class="clear"></div>
+				<div class="clear"></div>
 				<div id="q51" class="q">
 					<a class="item_anchor" name="ItemAnchor29"></a> 
 					<label	class="question left_question_first" for="RESULT_FileUpload-29">Upload Certificate</label>
@@ -262,8 +251,8 @@
 						<input type="submit" name="Upload-29" value="Upload" class="file_upload_button" /> 
 						<input	type="submit" name="Delete-29" value="Delete" class="file_upload_button" />
 					</div>
-				</div> -->
-	<!-- ################################################################################################################################################################################################################################################# -->
+				</div> 
+<!-- ################################################################################################################################################################################################################################################# -->
 				<div class="clear"></div>
 				<div id="q18" class="q full_width">
 					<a class="item_anchor" name="ItemAnchor32"></a>
@@ -329,7 +318,7 @@
 					</table>
 				</div>
 	
-				<!-- <div class="clear"></div>
+				<div class="clear"></div>
 				<div id="q58" class="q">
 					<a class="item_anchor" name="ItemAnchor37"></a> 
 					<label class="question left_question_first" for="RESULT_FileUpload-37">Upload Certificate</label>
@@ -339,7 +328,7 @@
 						<input type="submit" name="Upload-37" value="Upload" class="file_upload_button" /> 
 						<input type="submit" name="Delete-37" value="Delete" class="file_upload_button" />
 					</div>
-				</div> -->
+				</div>
 	
 				<div class="clear"></div>
 				<div id="q59" class="q">
@@ -361,7 +350,7 @@
 				
 				
 				
-	<!-- ################################################################################################################################################################################################################################################# -->
+<!-- ################################################################################################################################################################################################################################################# -->
 	
 				<div class="clear"></div>
 	
@@ -411,7 +400,7 @@
 						<input type="text" name="RESULT_TextField-44" class="text_field" id="Currency" size="25" maxlength="255" value="" />
 					</div>
 				</div>
-	<!-- ################################################################################################################################################################################################################################################# -->
+<!-- ################################################################################################################################################################################################################################################# -->
 	
 				<div class="clear"></div>
 	

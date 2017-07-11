@@ -14,7 +14,7 @@ function save() {
 				postalCode 				: $("#postalcode").val(),
 				homePhone 				: $("#homephone").val(),
 				cellPhone 				: $("#cellphone").val(),
-				/* dateOfBirth 			: new Date($("#dob").val()), */
+			/* dateOfBirth 				: new Date($("#dob").val()), */
 			/* uploadPhoto1 			: $("#up1").val(),
 				uploadPhoto2 			: $("#up2").val(), */
 				referredBy 				: $("#referredby").val(),
